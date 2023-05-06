@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+</head>
+<body>
+    <h6 class="display-6"> Архитектурные постройки </h6>
+    <a>Одни из самых красивых архитектурных построек по нашему мнению на момент окончания 2022 года:</a>
+    <ul>
+        {% for img in images %}
+            <li><p class="lead">{{ img[1] }}</p></li>
+            <img src="{{ url_for('static', filename='img/' + img[0]) }}" alt="Здесь должна была быть картинка, но она не нашлась.">
+        {% endfor %}
+    </ul>
+</body>
+{% endblock %}

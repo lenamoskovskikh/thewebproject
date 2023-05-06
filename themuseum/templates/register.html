@@ -1,0 +1,85 @@
+{% extends "base2.html" %}
+
+{% block content %}
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+</head>
+<body>
+    <h6> &nbsp; </h6>
+    <h6 class="display-6"> Регистрация </h6>
+    <h6> &nbsp; </h6>
+    {% if message %}
+        <div class="alert alert-warning" role="alert">
+            {{ message }}
+        </div>
+    {% endif %}
+
+    <form action="" method="post" novalidate>
+        {{ form.hidden_tag() }}
+        <p>
+            <div class="form-floating mb-3">
+                {{ form.login(class="form-control shadow bg-body rounded", type="email", id="floatingInput", placeholder="name@example.com") }}
+                <label for="floatingInput">{{ form.login.label }}</label>
+                <div id="emailHelp" class="form-text">Мы не передадим вашу электронную почту кому-либо еще.</div>
+            </div>
+            {% for error in form.login.errors %}
+                <div class="alert alert-danger" role="alert">
+                    {{ error }}
+                </div>
+            {% endfor %}
+        </p>
+        <p>
+            <div class="form-floating">
+                {{ form.password(class="form-control shadow bg-body rounded", type="password", id="floatingPassword", placeholder="Password") }}
+                <label for="floatingPassword">{{ form.password.label }}</label>
+                <div id="passwordHelpBlock" class="form-text">
+                    Ваш пароль должен состоять из 8-20 символов, содержать буквы (заглавные и строчные) и цифры и не должен содержать пробелов.
+                </div>
+            </div>
+            {% for error in form.password.errors %}
+                <div class="alert alert-danger" role="alert">
+                    {{ error }}
+                </div>
+            {% endfor %}
+        </p>
+        <p>
+            <div class="form-floating">
+                {{ form.confirm(class="form-control shadow mb-3 bg-body rounded", type="password", id="floatingPassword", placeholder="Password") }}
+                <label for="floatingPassword">{{ form.confirm.label }}</label>
+            </div>
+            {% for error in form.confirm.errors %}
+                <div class="alert alert-danger" role="alert">
+                    {{ error }}
+                </div>
+            {% endfor %}
+        </p>
+        <p>
+            <div class="form-floating">
+                {{ form.surname(class="form-control shadow mb-3 bg-body rounded", type="surname", id="floatingInput", placeholder="Surname") }}
+                <label for="floatingInput">{{ form.surname.label }}</label>
+            </div>
+            {% for error in form.surname.errors %}
+                <div class="alert alert-danger" role="alert">
+                    {{ error }}
+                </div>
+            {% endfor %}
+        </p>
+        <p>
+            <div class="form-floating">
+                {{ form.name(class="form-control shadow mb-3 bg-body rounded", type="name", id="floatingInput", placeholder="Name") }}
+                <label for="floatingInput">{{ form.name.label }}</label>
+            </div>
+            {% for error in form.name.errors %}
+                <div class="alert alert-danger" role="alert">
+                    {{ error }}
+                </div>
+            {% endfor %}
+        </p>
+        <h6> &nbsp; </h6>
+        <p>{{ form.submit(type="submit", class="btn btn-outline-primary shadow mb-3 rounded") }}</p>
+        <a><small>Уже есть аккаунт?</small></a>
+        <a href="/login" class="link-primary"><small>Войти</small></a>
+    </form>
+</body>
+{% endblock %}
