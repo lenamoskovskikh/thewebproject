@@ -5,14 +5,14 @@
 - на сайте присутствует различная информация о городах и других местах мира
 - есть возможность регистрации
 
-![alt text](static/img/wfg.jpg)
+![alt text](thewebproject-main/static/img/wfg.jpg)
  
 
 ### Описание ### 
 * На основной странице присутствует краткое введение, описание темы сайта, быстрые ссылки и контактный номер
 * Вы можете ознакомиться с различными городами, нажав на "города", а также посмотреть чудесную архитектуру
-![alt text](static/img/screen.png)
-![alt text](static/img/screen1.png)
+![alt text](thewebproject-main/static/img/screen.png)
+![alt text](thewebproject-main/static/img/screen1.png)
 
 
  
