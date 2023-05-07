@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block content %}
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+</head>
+<body>
+<h6 class="display-6">CITIES</h6>
+<div class="btn-group shadow mb-3 rounded" role="group" aria-label="Basic checkbox toggle button group">
+    <a role="button" class="btn btn-outline-success btn-sm" href="/cities/peking">ПЕКИН</a>
+    <a role="button" class="btn btn-outline-success btn-sm" href="/cities/tokyo">ТОКИО</a>
+    <a role="button" class="btn btn-outline-success btn-sm" href="/cities/hongkong">ГОНКОНГ</a>
+    <a role="button" class="btn btn-outline-success btn-sm" href="/cities/paris">ПАРИЖ</a>
+    <a role="button" class="btn btn-outline-success btn-sm" href="/cities/newyork">НЬЮ-ЙОРК</a>
+    <a role="button" class="btn btn-outline-success btn-sm" href="/cities/singapore">СИНГАПУР</a>
+    <a role="button" class="btn btn-outline-success btn-sm" href="/cities/oslo">ОСЛО</a>
+</div>
+<br><span style="font-family: Times New Roman, serif; font-size: 160%;">About culture and architecture of other countries</span>
+<img src="{{url_for('static', filename='img/cities/city.jpg')}}" alt="Здесь должна была быть картинка">
+{% block content1 %}{% endblock %}
+</body>
+{% endblock %}
